@@ -50,7 +50,7 @@ class Game_Client:
         keys=pygame.key.get_pressed()
         accel=pygame.Vector2( -1 if keys[pygame.K_LEFT] else 0 + +1 if keys[pygame.K_RIGHT] else 0, \
                               +1 if keys[pygame.K_DOWN] else 0 + -1 if keys[pygame.K_UP]    else 0 )
-        return Action.Action(self.name,accel)
+        return Action.Action(self.name,accel * 0.1)
             
 if __name__ == "__main__":
     main()
